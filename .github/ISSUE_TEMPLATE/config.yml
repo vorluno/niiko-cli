@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Reportar algo de niiko-cli
+    url: https://github.com/vorluno/niiko/issues
+    about: Este repositorio se genera del monorepo de niiko; lo que haya que arreglar se arregla allí.

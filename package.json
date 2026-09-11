@@ -1,0 +1,30 @@
+{
+  "name": "niiko-cli",
+  "version": "0.1.0",
+  "description": "La API de acciones de niiko desde la terminal. Generada del mismo plan que los SDK.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "niiko": "./dist/niiko.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vorluno/niiko-cli"
+  },
+  "homepage": "https://developers.niiko.org"
+}

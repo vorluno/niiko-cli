@@ -1,5 +1,10 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Reportar algo de niiko-cli
-    url: https://github.com/vorluno/niiko/issues
-    about: Este repositorio se genera del monorepo de niiko; lo que haya que arreglar se arregla allí.
+  - name: This client is GENERATED
+    url: https://github.com/vorluno/niiko-cli/issues
+    about: >-
+      Its code comes from the niiko action manifest, so a fix here would be lost on the next run. Report the
+      problem and it gets fixed at the source — which is also where the fix reaches the SDKs and the reference.
+  - name: An API fault, not a client fault
+    url: https://developers.niiko.org
+    about: If the server answers something the reference does not explain, start there.

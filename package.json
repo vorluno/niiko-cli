@@ -1,7 +1,15 @@
 {
   "name": "niiko-cli",
-  "version": "0.1.0",
-  "description": "La API de acciones de niiko desde la terminal. Generada del mismo plan que los SDK.",
+  "version": "0.1.1",
+  "description": "The niiko actions API from the terminal. Generated from the same plan as the SDKs.",
+  "keywords": [
+    "niiko",
+    "cli",
+    "crm",
+    "whatsapp",
+    "invoicing",
+    "actions-api"
+  ],
   "license": "MIT",
   "type": "module",
   "bin": {
@@ -9,7 +17,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
     "node": ">=20"
@@ -24,7 +33,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vorluno/niiko-cli"
+    "url": "git+https://github.com/vorluno/niiko-cli.git"
   },
-  "homepage": "https://developers.niiko.org"
+  "homepage": "https://developers.niiko.org",
+  "bugs": {
+    "url": "https://github.com/vorluno/niiko-cli/issues"
+  },
+  "author": "Vorluno (https://vorluno.dev)"
 }

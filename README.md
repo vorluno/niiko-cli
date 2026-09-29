@@ -2,10 +2,10 @@
 
 The niiko actions API from the terminal. One binary, four commands, and the outcome in the exit code.
 
-[![npm](https://img.shields.io/npm/v/niiko-cli?style=flat-square&color=0969da)](https://www.npmjs.com/package/niiko-cli) [![node](https://img.shields.io/badge/node-%3E%3D20-2C6440?style=flat-square)](https://nodejs.org) ![dependencies](https://img.shields.io/badge/dependencies-0-2C6440?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-0969da?style=flat-square) [![generated](https://img.shields.io/badge/generated_from_plan-6c3240a7b22d-555?style=flat-square)](https://developers.niiko.org)
+[![npm](https://img.shields.io/npm/v/niiko-cli?style=flat-square&color=0969da)](https://www.npmjs.com/package/niiko-cli) [![node](https://img.shields.io/badge/node-%3E%3D20-2C6440?style=flat-square)](https://nodejs.org) ![dependencies](https://img.shields.io/badge/dependencies-0-2C6440?style=flat-square) ![license](https://img.shields.io/badge/license-MIT-0969da?style=flat-square) [![generated](https://img.shields.io/badge/generated_from_plan-88185e0c8c12-555?style=flat-square)](https://developers.niiko.org)
 
 **A CLI that knows the actions it was written for is stale the day a new one opens.** This one is generated
-from the same plan as the SDKs, the reference and the MCP server (plan `6c3240a7b22d`): when an action opens,
+from the same plan as the SDKs, the reference and the MCP server (plan `88185e0c8c12`): when an action opens,
 `niiko actions` lists it and `niiko run` accepts it — nobody edits this repository by hand.
 
 ## Install

@@ -1,7 +1,7 @@
 {
   "name": "niiko-cli",
-  "version": "0.2.0",
-  "description": "The niiko actions API from the terminal. Generated from the same plan as the SDKs.",
+  "version": "0.3.0",
+  "description": "The niiko API from the terminal: actions, and a few declared reads. Generated from the same plan as the SDKs.",
   "keywords": [
     "niiko",
     "cli",

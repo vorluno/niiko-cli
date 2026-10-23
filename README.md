@@ -6,7 +6,7 @@ The niiko API from the terminal. One binary, six commands, and the outcome in th
 
 **A CLI that knows the actions it was written for is stale the day a new one opens.** This one is generated
 from the same plan as the SDKs, the reference and the MCP server (plan `dcf053ee9096`, reads plan
-`d920d3a1e10d`): when an action or a read opens, `niiko actions` or `niiko reads` lists it — nobody edits
+`3f80df17e901`): when an action or a read opens, `niiko actions` or `niiko reads` lists it — nobody edits
 this repository by hand.
 
 ## Install
@@ -69,7 +69,7 @@ for scripts that must not touch a person's configuration. The key is never print
 | `kiipu.draft_voided` | Voids a DRAFT invoice (one created with kiipu.invoice_proposed and not yet issued), by its id or by the client's name when it is their only draft. Does not void issued invoices: that is for a person in Kiipu. |
 | `kiipu.payment_reported` | Leaves in the Kiipu approval queue the notice that a client (by name) paid a given amount of an open invoice. Does NOT apply the payment and touches no balances: a person checks it against the bank and applies it. If the client has several open invoices the number must be given. |
 
-## The reads today (9)
+## The reads today (14)
 
 Read-only, and **with an OAuth access token** (`niiko login --token`, `--token` or `NIIKO_ACCESS_TOKEN`): a read is
 done on behalf of a person, with their role, so an API key gets `reads_need_a_person`. `niiko read` exits `0` on
@@ -86,6 +86,11 @@ done on behalf of a person, with their role, so an API key gets `reads_need_a_pe
 | `miira.funnel_get` | Reads the Miira lead funnel by stage (the same rule as the board), how many leads are qualified, how many came in this month and the 15 most recent with their stage. Clients who already bought are in the CRM, not here. |
 | `kiipu.month_result_get` | Reads this month's income statement from the ledger: revenue, expenses, net income, the accounts that weigh most and last month to compare. If the ledger does not balance right now it gives no figures; with no entries it says so, never zero. |
 | `crm.month_summary_get` | Reads how the month is going, piece by piece and with the same figures each read would give: new clients, collected, proposals sent and accepted, deals won, appointments and the ledger result. A piece the person's role does not see, or whose read is off, comes back in `unavailable`. |
+| `miira.catalog_search` | Searches the published catalog by words and returns up to 5 active public offerings with name, summary, price, currency and what the price is per; with exactly one match, also its whole description and attributes. Internal, paused and discontinued offerings never come back. |
+| `miira.knowledge_search` | Searches the knowledge base the team loaded for the sales agent (manuals, cases, answers to objections) by words, and returns up to 6 fragments with their document and section. Only active documents that finished indexing. It is not the source of a price: that is miira.catalog_search. |
+| `kiipu.client_balance_get` | Reads how much ONE client named by name owes in total, as the ledger has it, and their next installment due. A client never invoiced comes back as `never_invoiced`, never as up to date; a lead or a churned client, as `not_a_client`. With several matches it refuses with `ambiguous`; with none, `not_found`. |
+| `crm.client_overview_get` | Reads where ONE client named by name stands: their open invoices with balance and since when they are owed, the total owed, and which channels you have talked on with the day of their last message. Never what was said, and no phone or email. |
+| `miira.agent_config_get` | Reads how the sales agent is configured today: its persona, the script in order with what each question saves and scores, the funnel stages, the reference responses, the documents asked per client type and the milestones. With `configured: false` the workspace still has the demo setup. Changes nothing. |
 
 > [!IMPORTANT]
 > Each one needs **two** permissions: a key with that action's scope, **and** the workspace owner having switched
